@@ -1,0 +1,22 @@
+<header class="container">
+    <h3>首页</h3>
+    <hr>
+</header>
+<section class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <section class="panel panel-info">
+                <h4 class="panel-heading m-t0 m-b0">用户列表</h4>
+                <article id="list-user" class="panel-body"></article>
+                <footer class="panel-footer">##</footer>
+            </section>
+        </div>
+    </div>
+</section>
+<template id="tmp-uset">
+    <ol start="0">
+    {{#data}}
+        <li>{{user}}<em class="pull-right">{{date}}</em></li>
+    {{/data}}
+    </ol>
+</template>

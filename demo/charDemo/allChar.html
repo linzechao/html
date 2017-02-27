@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>HTML特殊字符大全_萤火开发网</title>
+    <style>
+        * {color:#fff;}
+        body {background:#000;font:40px/40px "隶书";}
+    </style>
+</head>
+<body>
+
+&#9740;
+<br>
+&#9996;
+<br>
+&#9754;
+<br>
+&#9756;
+<br>
+&#8981;
+<br>
+&#8631;
+
+
+<script>
+    var html = [];
+    html.push("<table border='1' cellpadding='5' cellspacing='0' bordercolor='#77a594' style='border-collapse:collapse'>");
+    html.push("<tr><td width='40'>符号</td><td width='80'>编码</td><td width='40'>符号</td><td width='80'>编码</td><td width='40'>符号</td><td width='80'>编码</td><td width='40'>符号</td><td width='80'>编码</td></tr>");
+    for(var i = 1; i <= 65536; i++){
+        if(i % 4 == 1){
+            html.push("<tr>");
+        }
+        html.push("<td>&#" + i + ";</td><td>&amp;#" + i + ";</td>");
+        if(i % 4 == 0){
+            html.push("</tr>");
+        }
+    }
+    document.write(html.join(""));
+</script>
+</body>
+</html>

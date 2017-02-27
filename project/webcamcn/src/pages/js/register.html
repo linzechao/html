@@ -1,0 +1,85 @@
+<script src="https://cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+<script>
+    $(function() {
+        var $form = $('form');
+        $form.validate({
+            debug: true,
+
+            // 输入时不验证
+            onkeyup: function(element) {
+                $(element).valid();
+            },
+
+            // 点击时是否验证
+            onclick: false,
+
+            // 未通过验证的第一个表单获得焦点
+            focusInvalid: true,
+
+            // 获取焦点时验证
+            onfocusout: false,
+
+            // 使用什么标签提示(默认label)
+            errorElement: 'span',
+
+            // 规则
+            rules: {
+                user: {
+                    required: true,
+                    rangelength: [6, 20]
+                },
+                password: {
+                    required: true,
+                    rangelength: [6, 20]
+                },
+                again: {
+                    equalTo: '#password'
+                }
+            },
+
+            // 错误提示
+            messages: {
+                user: {
+                    required: '用户名不能为空!',
+                    rangelength: '请输入6~20位的字母/数字'
+                },
+                password: {
+                    required: '密码不能为空!',
+                    rangelength: '请输入6~20位的字母/数字'
+                },
+                again: {
+                    equalTo: '两次输入密码不一致!'
+                }
+            },
+
+            // 验证不通过
+            errorPlacement: function(error, element) {
+                $(element).closest('.form-group').append(error[0].outerHTML);
+            },
+
+            // 验证通过
+            submitHandler: function() {
+                // 提交数据
+                $.ajax({
+                    url: 'lib/user.php?action=register',
+                    type: 'post',
+                    dataType: 'json',
+                    data: $form.serialize(),
+                    success: function(data) {
+                        if (data.status) {
+                            setTimeout(function() {
+                                location.href = 'login.html';
+                            }, 3000);
+                            alert('注册成功，3秒后跳至登录页!');
+                        } else {
+                            alert(data.msg);
+                        }
+                    }
+                });
+                return false;
+            }
+        });
+    });
+</script>
+</body>
+</html>

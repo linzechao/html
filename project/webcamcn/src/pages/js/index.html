@@ -1,0 +1,18 @@
+<script src="//cdn.bootcss.com/mustache.js/2.2.0/mustache.js"></script>
+<script>
+    $(function() {
+        // 请求用户列表
+        $.ajax({
+            url: 'lib/user.php?action=getUser',
+            dataType: 'json',
+            success: function(data) {
+                $('#list-user').html(Mustache.render($('#tmp-uset').html(), {data: data.data}));
+            },
+            error: function() {
+                console.info('请求超时...');
+            }
+        });
+    });
+</script>
+</body>
+</html>

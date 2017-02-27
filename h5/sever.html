@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>七巧板</title>
+    <style>
+        * {margin:0;padding:0;}
+        canvas {display:block;width:800px;height:800px;
+            margin-left:auto;margin-right:auto;
+        border:2px solid black;}
+    </style>
+</head>
+<body>
+    <canvas id='canvas'></canvas>
+    <script>
+        var tangram = [
+            {p:[{x:0, y:0}, {x:800, y:0}, {x:400, y:400}], color:'#caff67'},
+            {p:[{x:0, y:0}, {x:400, y:400}, {x:0, y:800}], color:'#67becf'},
+            {p:[{x:800, y:0}, {x:800, y:400}, {x:600, y:600}, {x:600, y:200}], color:'#ef3d61'},
+            {p:[{x:600, y:200}, {x:600, y:600}, {x:400, y:400}], color:'#f9f51a'},
+            {p:[{x:400, y:400}, {x:600, y:600}, {x:400, y:800}, {x:200, y:600}], color:'#a594c0'},
+            {p:[{x:200, y:600}, {x:400, y:800}, {x:0, y:800}], color:'#fa8ecc'},
+            {p:[{x:800, y:400}, {x:800, y:800}, {x:400, y:800}], color:'#f6ca29'}
+        ];
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            canvas.width = 800;
+            canvas.height = 800;
+            var context = canvas.getContext('2d');
+            for (var t = 0; t < tangram.length; t ++)
+                fun_drag(tangram[t], context);
+        }
+        function fun_drag(tan, cox) {
+
+            cox.beginPath();
+            cox.moveTo(tan.p[0].x, tan.p[0].y);
+            for (var i = 1; i < tan.p.length; i ++)
+                cox.lineTo(tan.p[i].x, tan.p[i].y);
+            cox.closePath();
+
+            cox.fillStyle = tan.color;
+            cox.fill();
+
+            cox.strokeStyle = "black"
+            cox.lineWidth = 4;
+            cox.stroke();
+        }
+    </script>
+</body>
+</html>

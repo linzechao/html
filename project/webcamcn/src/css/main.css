@@ -1,0 +1,109 @@
+/* 长宽*/
+.w100_ {width: 100%;}
+.h0 {height: 0;}
+.h-auto {height: auto;}
+
+/* 外边距*/
+.m0 {margin: 0;}
+.m5 {margin: 5px;}
+.m10 {margin: 10px;}
+.m15 {margin: 15px;}
+.m20 {margin: 20px;}
+
+.m-t0 {margin-top: 0;}
+.m-t5 {margin-top: 5px;}
+.m-t10 {margin-top: 10px;}
+.m-t15 {margin-top: 15px;}
+.m-t20 {margin-top: 20px;}
+
+.m-r0 {margin-right: 0;}
+.m-r5 {margin-right: 5px;}
+.m-r10 {margin-right: 10px;}
+.m-r15 {margin-right: 15px;}
+.m-r20 {margin-right: 20px;}
+
+.m-b0 {margin-bottom: 0;}
+.m-b5 {margin-bottom: 5px;}
+.m-b10 {margin-bottom: 10px;}
+.m-b15 {margin-bottom: 15px;}
+.m-b20 {margin-bottom: 20px;}
+
+.m-l0 {margin-left: 0;}
+.m-l5 {margin-left: 5px;}
+.m-l10 {margin-left: 10px;}
+.m-l15 {margin-left: 15px;}
+.m-l20 {margin-left: 20px;}
+
+/* 内边距*/
+.p0 {padding: 0;}
+.p5 {padding: 5px;}
+.p10 {padding: 10px;}
+.p15 {padding: 15px;}
+.p20 {padding: 20px;}
+
+.p-t0 {padding-top: 0;}
+.p-t5 {padding-top: 5px;}
+.p-t10 {padding-top: 10px;}
+.p-t15 {padding-top: 15px;}
+.p-t20 {padding-top: 20px;}
+
+.p-r0 {padding-right: 0;}
+.p-r5 {padding-right: 5px;}
+.p-r10 {padding-right: 10px;}
+.p-r15 {padding-right: 15px;}
+.p-r20 {padding-right: 20px;}
+
+.p-b0 {padding-bottom: 0;}
+.p-b5 {padding-bottom: 5px;}
+.p-b10 {padding-bottom: 10px;}
+.p-b15 {padding-bottom: 15px;}
+.p-b20 {padding-bottom: 20px;}
+
+.p-l0 {padding-left: 0;}
+.p-l5 {padding-left: 5px;}
+.p-l10 {padding-left: 10px;}
+.p-l15 {padding-left: 15px;}
+.p-l20 {padding-left: 20px;}
+
+/* 字体样式*/
+.f8 {font-size: 8px;}
+.f12 {font-size: 12px;}
+.f14 {font-size: 14px;}
+.f18 {font-size: 18px;}
+.f20 {font-size: 20px;}
+.f24 {font-size: 24px;}
+.f100_ {font-size: 100%;}
+
+.b {font-weight: bold;}
+.no-b {font-weight: normal;}
+
+.red {color: red;}
+.orange {color: orange;}
+.yellow {color: yellow;}
+.green {color: green;}
+.cyan {color: cyan;}
+.blue {color: blue;}
+.purple {color: purple;}
+.white {color: white;}
+.gray {color: gray;}
+.black {color: black;}
+
+/* 段落*/
+.break {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.of-h {overflow: hidden;}
+.p-r {position: relative;}
+.p-a {position: absolute;}
+
+.form-group.p-r span {
+    position: absolute;
+    right: 6px;
+    top: 12px;
+    padding: 2px 6px;
+    border: 1px solid #f06;
+    border-radius: 4px;
+    color: #f06;
+}

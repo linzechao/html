@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "microsoft yahei", "微软雅黑", "Arial", "sans-serif";
+      font-size: 0;
+    }
+
+    a img {border: 0;}
+    li {list-style: none;}
+
+    #slider-box {
+      position: relative;
+      width: 1280px;
+      height: 800px;
+      margin: 0 auto;
+    }
+
+    #slider-box .slider-img a {
+      position: absolute;
+      display: none;
+    }
+
+    #slider-box .slider-dir a {
+      position: absolute;
+      display: none;
+      opacity: .4;
+    }
+
+    #slider-box:hover .slider-dir a {
+      display: block;
+    }
+
+    #slider-box .slider-dir a:hover {
+      opacity: .8;
+    }
+
+    #slider-box .slider-dir .btn-left {
+      top: 376px;
+      left: 10px;
+    }
+
+    #slider-box .slider-dir .btn-right {
+      top: 379px;
+      right: 10px;
+    }
+
+    #slider-box .slider-sub {
+      position: absolute;
+      width: 100%;
+      top: 740px;
+      text-align: center;
+    }
+
+    #slider-box span {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      border-radius: 40px;
+      background: #fff;
+      opacity: .4;
+    }
+
+    #slider-box span.current,
+    #slider-box span:hover {
+      background: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div id="slider-box">
+  <div class="slider-img">
+    <a href="javascript:;" title="slider-1"><img src="../img/slider-1.jpg" alt="slider-1"></a>
+    <a href="javascript:;" title="slider-2"><img src="../img/slider-2.jpg" alt="slider-2"></a>
+    <a href="javascript:;" title="slider-3"><img src="../img/slider-3.jpg" alt="slider-3"></a>
+    <a href="javascript:;" title="slider-4"><img src="../img/slider-4.jpg" alt="slider-4"></a>
+  </div>
+  <div class="slider-dir">
+    <a class="btn-left" href="javascript:;"><img src="../img/left.png"></a>
+    <a class="btn-right" href="javascript:;"><img src="../img/right.png"></a>
+  </div>
+  <div class="slider-sub"></div>
+</div>
+<script src="../jq/jquery-1.8.3.js"></script>
+<script src="two.js"></script>
+</body>
+</html>

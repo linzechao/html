@@ -1,0 +1,222 @@
+@import "strong";
+
+.reset;
+
+@font-face {
+    .ff("en");
+    src: url("../fonts/en/en.eot");
+    src: url("../fonts/en/en.eot?#iefix") format("embedded-opentype"), url("../fonts/en/en.woff") format('woff'), url("../fonts/en/en.ttf") format("truetype"), url("../fonts/en/en.svg") format("svg");
+    .fw;
+    .fos;
+}
+
+@font-face {
+    .ff("in");
+    src: url("../fonts/in/in.eot");
+    src: url("../fonts/in/in.eot?#iefix") format("embedded-opentype"), url("../fonts/in/in.woff") format('woff'), url("../fonts/in/in.ttf") format("truetype"), url("../fonts/in/in.svg") format("svg");
+    .fw;
+    .fos;
+}
+
+@font-face {
+    .ff("icon");
+    src: url("../fonts/icon/icon.eot");
+    src: url("../fonts/icon/icon.eot?#iefix") format("embedded-opentype"), url("../fonts/icon/icon.woff") format('woff'), url("../fonts/icon/icon.ttf") format("truetype"), url("../fonts/icon/icon.svg") format("svg");
+    .fw;
+    .fos;
+}
+
+body {.bgc(#F5F6F6);}
+
+header {
+    .h(60px);
+    .bgc;
+    .ff("in");
+
+    nav {
+        .w(1104px);
+        .ml;
+        .mr;
+    }
+
+    ul {
+        .fr;
+        .ls;
+    }
+
+    li {
+        .fl;
+        line-height: 60px;
+    }
+
+    a {
+        &:link,
+        &:visited,
+        &:active {
+            .db;
+            .pl(20px);
+            .pr(20px);
+            .c(#fff);
+            .td;
+            text-transform: uppercase;
+        }
+
+        &:hover,
+        &.current {
+            .bgc(rgba(44, 44, 44, 0.2));
+        }
+    }
+}
+
+#content {
+    .w(1104px);
+    .ml;
+    .mr;
+    .bgc(#fff);
+    .bl(1px, solid, #ccc);
+    .br(1px, solid, #ccc);
+    .o;
+}
+
+aside {
+    .fl;
+    .w(120px);
+    .ml(40px);
+
+    a {
+        .ff("in");
+    }
+
+    ol {
+        .mt(40px);
+
+        >li {
+            .mb(40px);
+            .ls;
+        }
+    }
+
+
+    ul {
+        .ls;
+
+        li {
+            .mb(6px);
+            .mt(4px);
+        }
+    }
+}
+
+section {
+    .ml(140px);
+        
+    hgroup {
+        .h(240px);
+        .fw;
+        .o;
+            
+        img {
+            .poa;
+            .w(auto);
+            .h(240px);
+            .mt(-20px);
+            .ml(20px);
+        }
+    }
+
+    h1 {
+        .pt(40px);
+        .pl(250px);
+        .ff("in");
+        .fw;
+        .fs(80px);
+    }
+
+    h2 {
+        .pl(250px);
+        .fs(14px);
+        .fw;
+        .c(#ddd);
+    }
+}
+
+footer {
+    .bgc(#444);
+    .h(60px);
+    .lh(60px);
+
+    p {
+        .w(1104px);
+        .mr;
+        .ml;
+        .ta;
+        .c(#fff);
+        letter-spacing: 4px;
+        .fs(12px);
+        .c(#888);
+
+        code {
+            .ff("en");
+        }
+    }
+}
+
+/* 首页*/
+#home-page,
+#about-me {
+    hgroup img {
+        .w(240px);
+        .h(auto);
+    }
+}
+
+#home-page {
+    article {
+        .ta;
+    }
+}
+
+.box {
+    .w(220px);
+    .dib;
+    .pp;
+    .mm(10px);
+    .bob(1px, solid, #eee);
+    .bra(4px);
+
+    img {
+        .w(auto);
+        .h(110px);
+        .mt(10px);
+    }
+
+    >code {
+        .db;
+        .ta(left);
+    }
+
+    code {
+        .ff("in");
+    }
+
+    p {
+        .ti;
+        .fs(14px);
+        .ta(left);
+
+        a {
+            .c(#bbb);
+
+            &:hover {
+                .c(@fc);
+                .td;
+            }
+        }
+    }
+
+    .button {
+        .dib;
+        .mt(4px);
+        .fs(12px);
+    }
+}

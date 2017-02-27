@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>共享Css样式</title>
+    <style>
+        * {margin:0;padding:0;}
+        a:link, a:hover, a:visited, a:active {text-decoration:none;color:#888;}
+        a:hover {padding-bottom:2px;border-bottom:1px solid #888;}
+        a img {border:0;}
+        li{list-style:none;}
+        button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {cursor:pointer;}
+        table {width:100%}
+        table, caption, th, td {border-collapse:collapse;border:1px solid #888;}
+        hr {height:1px;border:none;border-top:1px solid #888;background:#eee;clear:both;margin:4px 0;}
+        input:disabled, button:disabled, textarea:disabled, select:disabled {cursor:no-drop;}
+        textarea {resize:none;}
+    </style>
+</head>
+<body>
+<button disabled>Disabled</button>
+<label><input type="radio" disabled>好</label>
+<textarea disabled></textarea>
+<hr>
+<select disabled><option>呵呵</option></select>
+<a href="javascript:;">链接</a>
+<br>
+<br>
+<table><tr><th>1</th><td>2</td></tr></table>
+</body>
+</html>

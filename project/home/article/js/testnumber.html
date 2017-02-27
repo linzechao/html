@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>验证数值</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+<header>
+    <div class="top-line"></div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>&lt;<a href="../../index.html">Mr. Super</a>&gt;</h1>
+            <p>需求：对输入的文本进行检测，输入后进行裁剪成标准的数值。即把“0000.1”、“0000010”、“100010.”等相对应地转换成“0.1”、“10”、“100010”。</p>
+            <p>正则已经测试过，根本不能进行匹配到。所以只能使用<code>JavaScript</code>来处理。</p>
+        </div>
+    </div>
+</header>
+<section class="container">
+    <h4>代码如下：</h4>
+    <article>
+        <pre>
+var sParamVal = '44super0林.0206.81';
+
+/* 清除非数字非小数点字符*/
+var rNumber = /[^\d^\.]+/g;
+sParamVal = sParamVal.replace(rNumber, '');
+
+/* 强制转化成浮点类型*/
+var sFloatVal = parseFloat(sParamVal);
+console.log(sFloatVal); // 440.0206
+        </pre>
+    </article>
+</section>
+
+<footer>
+    <p>Web前Duang工程师, 专注“特效”快1年</p>
+</footer>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+    (function() {
+        var sParamVal = '44super0林.0206.81';
+
+        /* 清除非数字非小数点字符*/
+        var rNumber = /[^\d^\.]+/g;
+        sParamVal = sParamVal.replace(rNumber, '');
+
+        /* 强制转化成浮点类型*/
+        var sFloatVal = parseFloat(sParamVal);
+        // console.log(sFloatVal); // 440.0206
+    }());
+</script>
+</body>
+</html>

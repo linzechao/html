@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>圆</title>
+    <style>
+        * {margin:0;padding:0;}
+        canvas {display:block;width:400px;height:400px;
+            margin-left:auto;margin-right:auto;
+        border:2px solid #abcdef;}
+    </style>
+</head>
+<body>
+<canvas id='canvas'></canvas>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById('canvas');
+        canvas.width = 400;
+        canvas.height = 400;
+        var context = canvas.getContext('2d');
+        context.lineWidth = 4;
+        context.strokeStyle = "#abcdef";
+
+        context.beginPath();
+        context.arc(200, 200, 100, 1.5 * Math.PI, 1 * Math.PI);
+
+        //context.beginPath();
+        context.arc(150, 200, 50, 1 * Math.PI, 2.5 * Math.PI);
+
+        context.stroke();
+    }
+</script>
+</body>
+</html>

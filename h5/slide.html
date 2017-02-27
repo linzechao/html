@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+        #main{position:relative;width:800px;height:400px;margin:40px auto 0;border:1px solid #000;}
+        #main div{position:absolute;width:300px;height:200px;background:#ccc;opacity:0.8;text-align:center;cursor:pointer;transition:all 0.5s ease-in;}
+
+        #main div.current{top:50px;left:200px;width:400px;height:300px;z-index:4;opacity:1;}
+        #main div.topRight{top:100px;left:500px;z-index:3;}
+        #main div.topLeft{top:100px;left:0px;z-index:3;}
+        #main div.bottomLeft{top:150px;left:100px;width:200px;height:100px;z-index:2;}
+        #main div.bottomRight{top:150px;left:500px;width:200px;height:100px;z-index:2;}
+    </style>
+</head>
+<body>
+<div id='main'>
+    <div class='current'>book1</div>
+    <div class='topRight'>book2</div>
+    <div class='topLeft'>book3</div>
+    <div class='bottomLeft'>book4</div>
+    <div class='bottomRight'>book5</div>
+</div>
+<script src='../../../note/plugins/require/js/utils/jquery.js'></script>
+<script>
+    $(function(){
+        var $objMain = $('#main');
+        var $objDivs = $objMain.find('div');
+        function init() {
+            $objMain.find('div').each(function(index, item) {
+                var $objItem = $(item);
+                $objItem.css({lineHeight:$objItem.height()-40+'px'});
+            });
+        }
+        init();
+        $objMain.find('div').on('click', function() {
+            var $objSelf = $(this);
+            if($objSelf.hasClass('current')) return;
+            if($objSelf.hasClass('topRight')) {
+                $objDivs.filter('.bottomRight').removeClass().addClass('topRight');
+                $objDivs.filter('.bottomLeft').removeClass().addClass('bottomRight');
+                $objDivs.filter('.topLeft').removeClass().addClass('bottomLeft');
+                $objDivs.filter('.current').removeClass().addClass('topLeft');
+                $objSelf.removeClass().addClass('current');
+                init();
+            } else if($objSelf.hasClass('topLeft')) {
+                $objDivs.filter('.bottomLeft').removeClass().addClass('topLeft');
+                $objDivs.filter('.bottomRight').removeClass().addClass('bottomLeft');
+                $objDivs.filter('.topRight').removeClass().addClass('bottomRight');
+                $objDivs.filter('.current').removeClass().addClass('topRight');
+                $objSelf.removeClass().addClass('current');
+                init();
+            }
+        });
+    });
+</script>
+</body>
+</html>

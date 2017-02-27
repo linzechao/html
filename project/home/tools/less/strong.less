@@ -1,0 +1,231 @@
+/* 定位*/
+@fc: #FEAA1C;
+@bc: #5B95CC;
+
+.poa() {position: absolute;}
+.por() {position: relative;}
+.pof() {position: fixed;}
+
+.t(@t:4px) {left: @t;}
+.r(@t:4px) {left: @r;}
+.b(@b:4px) {left: @b;}
+.l(@l:4px) {left: @l;}
+
+.zi(@zi) {z-index: @zi;}
+
+/* 表现*/
+.di() {display: inline;}
+.db() {display: block;}
+.dn() {display: none;}
+.dt() {display: table;}
+.dib() {display: inline-block;}
+
+.o(@o:hidden) {overflow: @o;}
+
+/* 浮动*/
+.fl() {
+    float: left;
+    .di;
+}
+.fr() {
+    float: right;
+    .di;
+}
+
+/* 基础*/
+.w(@w:100%) {width: @w;}
+.h(@h:100%) {height: @h;}
+.lh(@lh:100%) {line-height: @lh;}
+
+/* 盒子*/
+.mt(@mt:auto) {margin-top: @mt;}
+.mr(@mr:auto) {margin-right: @mr;}
+.mb(@mb:auto) {margin-bottom: @mb;}
+.ml(@ml:auto) {margin-left: @ml;}
+.mm(@mm:4px) {margin: @mm;}
+.m0() {margin: 0;}
+
+.pt(@pt:4px) {padding-top: @pt;}
+.pr(@pr:4px) {padding-right: @pr;}
+.pb(@pb:4px) {padding-bottom: @pb;}
+.pl(@pl:4px) {padding-left: @pl;}
+.pp(@pp:4px) {padding: @pp;}
+.p0() {padding: 0;}
+
+.bgc(@bg:@bc) {background-color: @bg;}
+.bgi(@bg:transparent, @i, @t:center, @l:center, @r:no-repeat) {background: @arguments;}
+
+.br0() {border: 0;}
+.bt(@p:1px, @s:solid, @c:@bc) {border-top: @arguments;}
+.br(@p:1px, @s:solid, @c:@bc) {border-right: @arguments;}
+.bb(@p:1px, @s:solid, @c:@bc) {border-bottom: @arguments;}
+.bl(@p:1px, @s:solid, @c:@bc) {border-left: @arguments;}
+.bob(@p:1px, @s:solid, @c:@bc) {border: @arguments;}
+.bra(@br:4px) {border-radius: @br;}
+
+/* 排版*/
+.c(@c:@bc) {color: @c;}
+
+.ti(@ti:2em) {text-indent: @ti}
+.ta(@ta:center) {text-align: @ta;}
+.td(@td:none) {text-decoration: @td;}
+.to(@to:ellipsis) {text-overflow: @to;}
+
+.fs(@fs:14px) {font-size: @fs;}
+.ff(@ff:"microsoft yahei") {font-family: @ff;}
+.fw(@fw:normal) {font-weight: @fw;}
+.fos(@fos:normal) {font-style: @fos;}
+
+/* 其他*/
+.cu(@cu:pointer) {cursor: @cu;}
+.ls(@ls:none) {list-style: @ls};
+
+/* 功能*/
+.cf() { // 清除浮动
+    &:after {
+        content: '';
+        .dt;
+        clear: both;
+    }
+
+    *zoom: 1;
+}
+
+.of(@of:0.4) { // 透明度
+    opacity: @of;
+    filter: alpha(opacity=@of);
+}
+
+.triangle(top, @w:4px, @c:@bc) { // 三角形
+    border-width: @w;
+    border-color: transparent transparent @c transparent;
+    border-style: dashed dashed solid dashed;
+}
+.triangle(right, @w:4px, @c:@bc) {
+    border-width: @w;
+    border-color: transparent transparent transparent @c;
+    border-style: dashed dashed dashed solid;
+}
+.triangle(bottom, @w:4px, @c:@bc) {
+    border-width: @w;
+    border-color: @c transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+}
+.triangle(left, @w:4px, @c:@bc) {
+    border-width: @w;
+    border-color: transparent @c transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+.triangle(@_, @w:4px, @c:@bc) {
+    .w(0);
+    .h(0);
+    .o;
+}
+
+/* 文字超出用省略号*/
+.text() {
+    .o;
+    .to;
+    word-spacing: normal;
+}
+
+/* 重置*/
+.reset() {
+    body,
+    ul,
+    ol,
+    h1,
+    h2,
+    h3,
+    h4,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    ul,
+    ol {
+        padding: 0;
+    }
+
+    i,
+    b,
+    strong {
+        font-style: normal;
+    }
+
+    :focus {
+        outline: none;
+    }
+
+    a {
+        &:link,
+        &:visited,
+        &:active {
+            .td;
+            .c(@bc);
+        }
+
+        &:hover,
+        &.current {
+            .td(underline);
+            .c(@fc);
+        }
+
+        img {
+            .br0;
+        }
+    }
+
+    button,
+    input[type=button],
+    input[type=submit],
+    input[type=reset],
+    a.button {
+        .br0;
+        .bgc;
+        .c(#fff);
+        .bra;
+        .pp;
+    }
+
+    button:hover,
+    input[type=button]:hover,
+    input[type=submit]:hover,
+    input[type=reset]:hover {
+        .cu;
+        .bgc(@fc);
+    }
+
+    table {
+        .w;
+    }
+
+    table,
+    caption,
+    th,
+    td {
+        border-collapse: collapse;
+        .br;
+    }
+
+    hr {
+        .h(1);
+        .br0;
+        .bt;
+        .bgc;
+        clear: both;
+        margin: 4px 0;
+    }
+
+    input:disabled,
+    button:disabled,
+    textarea:disabled,
+    select:disabled,
+    a.disabled {
+        .cu(no-drop);
+    }
+
+    textarea {resize: none;}
+
+}

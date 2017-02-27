@@ -1,0 +1,33 @@
+html {font-size: 16px;}
+ul, ol {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.pl0 {padding-left: 0;}
+.pt1 {padding-top: 1rem;}
+.pr0 {padding-right: 0;}
+.pb1 {padding-bottom: 1rem;}
+
+.mb0 {margin-bottom: 0;}
+
+.w100 {width: 100%;}
+
+.db {display: block;}
+.dib {display: inline-block;}
+
+.c444 {color: #444;}
+.bcf8f8f8 {background-color: #f8f8f8;}
+.bcddd {background-color: #ddd;}
+.bceee {background-color: #eee;}
+
+.nowrap {white-space: nowrap;}
+.overhide {overflow: hidden;}
+
+.fs1 {font-size: 1rem;}
+.fs2 {font-size: 2rem;}
+
+header a:active {
+    color: #888;
+    background-color: #ccc;
+}

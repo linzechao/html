@@ -1,0 +1,31 @@
+{
+  "name": "mobile",
+  "version": "0.0.1",
+  "homepage": "https://github.com/linzechao/mobile",
+  "authors": [
+    "Mr. Super <linzechao44@163.com>"
+  ],
+  "description": "mobile web app",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "mobile",
+    "web",
+    "app"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "~1.1.6",
+    "d3": "~3.5.6",
+    "bootstrap": "~3.3.5",
+    "Touch": "touch#^0.0.1",
+    "jquery-mobile": "^1.4.5"
+  }
+}

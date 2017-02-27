@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>tab</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑", Arial;
+		}
+
+		body {
+			width: 800px;
+			margin: 10px auto;
+			background-color: #f8f8f8;
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		table,
+		th,
+		td {border: 1px solid #aaa;}
+
+		tr:nth-child(odd) th,
+		tr:nth-child(odd) td {
+			background-color: #f0f0f0;
+		}
+
+		th,
+		td {padding: 6px;}
+
+		th {
+			width: 320px;
+			font-weight: normal;
+			font-size: 12px;
+			text-align: left;
+		}
+
+		td {
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		须知：由“&lt;”和“&gt;”符号包围起来的字母，我们统称为标签。这里我们以简单为主，不考虑标准。<br>
+		标签有单便签和闭合标签。<br>
+		单标签：只有开始，没有结束，比如：&lt;br&gt;、&lt;hr&gt;<br>
+		闭合标签：有开始，有结束，比如：&lt;b&gt;....&lt;/b&gt;、&lt;i&gt;....&lt;/i&gt;
+	</p>
+	<table>
+		<tr>
+			<th>&lt;img src="http://...." title="...."&gt;</th>
+			<td>图片标签，src为图片路径<span class="strong">(必须)</span>；title为鼠标放在图片上显示的内容或者图片不存在时显示title内容(可不加)</td>
+		</tr>
+
+		<tr>
+			<th>&lt;br&gt;</th>
+			<td>换行</td>
+		</tr>
+
+		<tr>
+			<th>&lt;hr&gt;</th>
+			<td>分割线(如下)
+				<hr>
+			</td>
+		</tr>
+
+		<tr>
+			<th>&lt;i&gt;....&lt;/i&gt;</th>
+			<td><i>斜体(italic)</i></td>
+		</tr>
+
+		<tr>
+			<th>&lt;b&gt;....&lt;/b&gt;</th>
+			<td><b>加粗(bold)</b></td>
+		</tr>
+
+		<tr>
+			<th>&lt;s&gt;....&lt;/s&gt;</th>
+			<td><s>删除线</s></td>
+		</tr>
+
+		<tr>
+			<th>&lt;u&gt;....&lt;/u&gt;</th>
+			<td><u>下划线</u></td>
+		</tr>
+
+		<tr>
+			<th>&lt;p&gt;....&lt;/p&gt;</th>
+			<td>段落，带有上边距和下边距(间隔)</td>
+		</tr>
+
+		<tr>
+			<th>&lt;span style="color:red;"&gt;....&lt;/span&gt;</th>
+			<td>给文字加上颜色<span style="color:green;">green</span>、<span style="color:blue;">blue</span>等颜色单词，色调值也可以，比如<span style="color:#f00;">红色#f00;</span></td>
+		</tr>
+
+		<tr>
+			<th>&lt;span style="background:green;"&gt;....&lt;/span&gt;</th>
+			<td><span style="background:yellow;">给文字加上背景颜色</span></td>
+		</tr>
+
+		<tr>
+			<th>&lt;span style="font-size:20px;"&gt;....&lt;/span&gt;</th>
+			<td><span style="font-size:20px;">字体大小</span>
+				网页默认大小是16px，px(像素)越大，字体越大
+			</td>
+		</tr>
+
+		<tr>
+			<th>&lt;a href="http://...." title="...." target="_blank"&gt;....&lt;/a&gt;</th>
+			<td>超链接，href为跳转的地址<span class="strong">(必须)</span>；title为鼠标移在链接上显示的内容(可不加)；加上target="_blank"则页面从新页面打开，不加表示在当前页面打开</td>
+		</tr>
+
+		<tr>
+			<th>&lt;sup&gt;....&lt;/sup&gt;</th>
+			<td>上标，5cm * 5cm = 25cm<sup>2</sup></td>
+		</tr>
+
+		<tr>
+			<th>&lt;sub&gt;....&lt;/sub&gt;</th>
+			<td>下标，H<sub>2</sub>O</td>
+		</tr>
+
+		<tr>
+			<th>&lt;h1&gt;....&lt;/h1&gt;、....、&lt;h6&gt;....&lt;/h6&gt;</th>
+			<td>标题，h1最大，h6最小<br>
+				<h1>h1</h1>
+				<h2>h2</h2>
+				<h3>h3</h3>
+				<h4>h4</h4>
+				<h5>h5</h5>
+				<h6>h6</h6>
+			</td>
+		</tr>
+
+		<tr>
+			<th>&lt;div style="text-align:center;"&gt;....&lt;/div&gt;</th>
+			<td><div style="text-align:center;">居中</div>
+				左对齐：left<br>
+				居中：center<br>
+				右对齐：right<br>
+				两端对齐：justify
+			</td>
+		</tr>
+
+		<tr>
+			<th>&lt;span style="color:red;font-size:30px;"&gt;&#38;hearts;&lt;/span&gt;</th>
+			<td>
+				红心：&#38;hearts;
+				<span style="color:red;font-size:30px;">&hearts;</span>
+				<br>
+				笑脸：&#38;#9787;
+				<span style="color:blue;font-size:30px;">&#9787;</span>
+				<br>
+				窟窿：&#38;#9760;
+				<span style="color:green;font-size:60px;">&#9760;</span>
+				<br>
+				<a href="http://www.jb51.net/onlineread/htmlchar.htm" target="_blank">参考参考</a>
+				<br>
+				....
+				<br>
+				可以使用十六进制来显示特殊字符图标，比如上面的笑脸：&#38;#9787;
+				<br>
+				也可以直接用输入法输入特殊字符图标，比如：主流输入法输入v1，可以选到★、●、◆、▲等....
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
